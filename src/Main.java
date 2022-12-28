@@ -68,11 +68,10 @@ public class Main {
     }
 
     private static ArrayList<Integer> removeEvenNumbers(ArrayList<Integer> al) {
-        Iterator iterator = al.iterator();
+        Iterator<Integer> iterator = al.iterator();
 
         while (iterator.hasNext()) {
-            Object current = iterator.next();
-            if (current.hashCode() % 2 == 0) {
+            if (iterator.next() % 2 == 0) {
                 iterator.remove();
             }
         }
